@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 0;
+  overflow: hidden;
+}
+
+.section {
+  height: 100vh;
+}
+
+.background_circle {
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  margin-top: 213px;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.right {
+  flex-direction: column;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.left .small_circle {
+  height: 572px;
+  margin-left: -180px;
+  width: 572px;
+}
+
+.left .dots {
+  height: 70px;
+  align-self: center;
+  position: absolute;
+  top: 583px;
+  left: 462px;
+}
+
+.right .big_circle {
+  margin-top: -223px;
+  margin-right: -100px;
+  width: 62vw;
+}
+
+.right .dots {
+  height: 70px;
+  align-self: flex-end;
+  margin-right: 32px;
+}
