@@ -1,16 +1,61 @@
-
-<div class="wrapper">
-  <app-nav></app-nav>
+<div class="wrapper" #scroll>
+  <app-nav [isScroll]="isScroll"></app-nav>
   <section>
     <div class="background_circle">
       <div class="left">
-        <img class="image small_circle" src="assets/blob-small.svg" alt="blob-small">
-        <img class="image dots" src="assets/accounting_dots.svg" alt="accounting-dots">
+        <img
+          class="image small_circle"
+          src="assets/blob-small.svg"
+          alt="blob-small"
+        />
+        <img
+          class="image dots"
+          src="assets/accounting_dots.svg"
+          alt="accounting-dots"
+        />
       </div>
       <div class="right">
-        <img class="image big_circle" src="assets/circle.svg" alt="circle">
-        <img class="image dots" src="assets/accounting_dots.svg" alt="accounting-dots">
+        <img class="image big_circle" src="assets/circle.svg" alt="circle" />
+        <img
+          class="image dots"
+          src="assets/accounting_dots.svg"
+          alt="accounting-dots"
+        />
+      </div>
+    </div>
+    <div class="collect">
+      <div style="width: 407px; margin-left: 40px">
+        <h1 style="margin-bottom: 8px">We make it Super Simple</h1>
+        <div class="line" style="margin-bottom: 82px"></div>
+      </div>
+      <img
+        style="width: 34vw; height: 19vw"
+        class="image"
+        src="assets/collect_img-video.png"
+        alt="collect"
+      />
+    </div>
+  </section>
+  <section class="bottom_section">
+    <div class="features">
+      <div class="feature_grid">
+        <app-features
+          [ngClass]="{'position':odd}"
+          *ngFor="let feature of features;let odd = odd"
+          [imageSrc]="feature?.imageSrc"
+          [desc]="feature?.desc"
+          [title]="feature?.title"
+        ></app-features>
+      </div>
+      <div style="width: 407px; margin-left: 40px;flex: 0 1 40%;">
+        <h1 style="margin-bottom: 52.82px">Boost your business with Open</h1>
+        <div class="line" style="margin-bottom: 33px"></div>
+        <p style="color: #777777;">Get your hands on a term loan that’s crafted for your business</p>
+        <button class="btn open_account"><p>Get an Open Account</p></button>
       </div>
     </div>
   </section>
+  <div class="eligibility_calculator">
+    <app-eligibilty-calculator></app-eligibilty-calculator>
+  </div>
 </div>

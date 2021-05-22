@@ -1,0 +1,177 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  width: 41vw;
+}
+
+.calculator {
+  flex: 0 1 70%;
+  box-shadow: 0px 0px 30px #2321321f;
+  border-radius: 24px;
+  background-color: #fff;
+}
+
+.result {
+  flex: 0 1 30%;
+}
+
+.header {
+  text-align: center;
+  background-color: #fcfcff;
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 10px 30px;
+  font-size: 34px;
+}
+
+.field_input {
+  padding: 20px 35px;
+  margin-bottom: 20px;
+}
+
+p.amount {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.range {
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #9f62c9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #9f62c9;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #a0a0a0;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-box .prefix {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.input-box input {
+  flex-grow: 1;
+  font-size: 24px;
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.input-box:focus-within {
+  border-color: #777;
+}
+
+select#tenure {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+  border-bottom: 1px solid #888;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.result {
+  flex: 0 1 30%;
+  background: #663399;
+  color: white;
+  height: 350px;
+  align-self: center;
+  margin-left: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.result_title {
+  margin-bottom: 0;
+  color: #fcfcff;
+}
+
+.result_amount {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.get_money {
+  color: #663399;
+  padding: 10px 10px;
+  background-color: #fff ;
+}

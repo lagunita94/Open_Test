@@ -1,9 +1,9 @@
-* {
-  box-sizing: border-box;
-}
 .wrapper {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: 100vh;
 }
 
 .section {
@@ -34,17 +34,18 @@
 }
 
 .left .small_circle {
-  height: 572px;
-  margin-left: -180px;
-  width: 572px;
+  height: 30vw;
+  margin-left: -11vw;
+  width: 30vw;
 }
 
 .left .dots {
   height: 70px;
   align-self: center;
   position: absolute;
-  top: 583px;
-  left: 462px;
+  top: 32vw;
+  left: 25vw;
+  z-index: 9;
 }
 
 .right .big_circle {
@@ -57,4 +58,48 @@
   height: 70px;
   align-self: flex-end;
   margin-right: 32px;
+}
+
+.collect {
+  position: absolute;
+  top: 270px;
+  left: 136px;
+}
+
+.features{
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+.open_account {
+  padding: 0px 39px;
+  color: #663399;
+}
+
+.feature_grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex: 0 1 50%;
+  row-gap: 60px;
+  position: relative;
+  flex: 0 1 50%;
+}
+
+.position {
+  position: relative;
+  top: 50%;
+}
+
+.bottom_section {
+  background-image: url('../assets/sol_wave_bg.svg');
+}
+
+.eligibility_calculator {
+  position: absolute;
+  top: 14.3vw;
+  right: 7vw;
+  z-index: 9;
 }

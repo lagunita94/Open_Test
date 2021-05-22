@@ -11,8 +11,8 @@
 }
 .nav .logo {
     object-fit: contain;
-    width: 123px;
-    margin-left: 120px;
+    width: 6.5vw;
+    margin-left: 6.4vw;
 }
 
 .nav .menu {
@@ -31,16 +31,6 @@ span:hover {
     color: #663399;
 }
 
-.btn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    border: 2px solid #663399;
-    border-radius: 24px;
-    box-shadow: 0px 0px 20px #00000033;
-    cursor: pointer;
-}
-
 .btn:hover {
     background: #663399;
     color: white;
@@ -55,9 +45,15 @@ span:hover {
 .get_started {
     border: none;
     outline: none;
-    padding: 10px 25px;
+    padding: 13px 25px;
     color: white;
     margin-left: 24px;
     margin-right: 100px;
     background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+}
+
+.scroll {
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
 }

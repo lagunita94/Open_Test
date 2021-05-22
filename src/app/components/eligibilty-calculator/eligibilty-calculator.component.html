@@ -1,0 +1,58 @@
+<div class="flex">
+  <div class="calculator">
+    <div class="header">
+      <h1>Eligibility Calculator</h1>
+    </div>
+    <div class="field_input">
+      <p>Monthly Income</p>
+      <p class="amount">₹&nbsp;{{ monthly }}</p>
+      <input
+        class="range"
+        (input)="change($event, 'income')"
+        type="range"
+        id="monthly"
+        step="1000"
+        min="100000"
+        max="300000"
+        [value]="monthly"
+      />
+      <p>Monthly Expense</p>
+      <p class="amount">₹&nbsp;{{ expense }}</p>
+      <input
+        class="range"
+        (input)="change($event, 'expense')"
+        type="range"
+        id="monthly"
+        step="1000"
+        min="0"
+        max="100000"
+        [value]="expense"
+      />
+      <p>Repayment Tenure</p>
+      <select name="tenure" id="tenure" style="width: 100%">
+        <option *ngFor="let item of tenures" [value]="item.value">
+          {{ item.viewValue }}
+        </option>
+      </select>
+      <div class="df ai" style="width: 100%; justify-content: space-between">
+        <p>Do you have any existing loans ?</p>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <p>EMI of existing loan (optional)</p>
+      <div class="input-box">
+        <span class="prefix">₹</span>
+        <input type="text" value="15000" />
+      </div>
+    </div>
+  </div>
+  <div class="result">
+      <p class="result_title">Loan Amount</p>
+      <p class="result_amount">₹&nbsp;1,00,000</p>
+      <p class="result_title">Your EMI will be</p>
+      <p class="result_amount">₹&nbsp;15,000</p>
+      <button class="btn get_money">GET MONEY</button>
+  </div>
+</div>
